@@ -53,9 +53,13 @@
     height: 100%;
     object-fit: cover;
 
-    &--3 {
-      @include onTablet {
-       display: none;
+    .exhibition-card__gallery {
+      &:has(.exhibition-card__link--square:nth-child(3)) {
+        @include onTablet {
+          .exhibition-card__link--square {
+            grid-column: span 3;
+          }
+        }
       }
     }
   }
