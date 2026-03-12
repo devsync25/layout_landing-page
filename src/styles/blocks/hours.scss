@@ -1,0 +1,76 @@
+.hours {
+ @include pageGrid;
+
+  &__header {
+    grid-column: 1 / -1;
+
+
+    @include onTablet {
+      grid-column: 1 / 4;
+    }
+    @include onDesktop {
+      grid-column: 1 / 6;
+    }
+    
+  }
+
+  &__subtitle {
+    color: #d12d35;
+    font-size: 12px;
+    line-height: 140%;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    text-align: left;
+  }
+
+  &__wrapper {
+    display: grid;
+    row-gap: 16px;
+    margin: 0;
+    grid-column: 1 / -1;
+
+    @include onTablet {
+      grid-column: 4 / 7;
+    }
+
+    @include onDesktop {
+      grid-column: span 5;
+    }
+  }
+}
+
+.schedule-hours {
+  display: grid;
+  row-gap: 8px;
+
+  margin: 0;
+  margin-bottom: 24px;
+  padding: 0;
+
+  &__name {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 125%;
+  }
+
+  &__time {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 169%;
+  }
+
+  &__days {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 169%;
+  }
+
+  &__note {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 169%;
+  }
+}
