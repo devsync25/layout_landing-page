@@ -1,0 +1,67 @@
+.button-primary {
+  cursor: pointer;
+
+  display: inline-block;
+
+  width: 100%;
+  padding: 16px;
+  border: none;
+
+  font-family: inherit;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: #d12d35;
+
+  @include hover(background-color, #a72026);
+
+  &:active {
+    background-color: #e53940;
+  }
+}
+
+.button-link {
+  display: block;
+
+  box-sizing: border-box;
+  width: 100%;
+  width: fit-content;
+  padding-bottom: 8px;
+  border-bottom: 1px solid transparent;
+
+  font-weight: 700;
+  color: $main-text-color;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  @include hover(border-color, $main-text-color);
+}
+
+.form-input {
+  padding: 16px;
+  border: 1px solid transparent;
+
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  color: #161616;
+
+  background-color: #f8f8fa;
+  outline: none;
+
+  transition: background-color $effectDuration ease, border-color $effectDuration ease;
+
+  @include hover(background-color, #f8f8fa);
+
+  &::placeholder {
+    font-size: 14px;
+    color: #7e7e83;
+  }
+
+  &:focus {
+    border-color: #161616;
+    background-color: #f8f8fa;
+  }
+}

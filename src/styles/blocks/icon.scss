@@ -1,7 +1,9 @@
 .icon {
   display: block;
-  height: 24px;
+
   width: 24px;
+  height: 24px;
+
   background-image: url(../images/icons/icon-burger-menu.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -9,9 +11,9 @@
   
   @include hover(transform, scale(1.2));
 
-  @include onTablet() {
-    height: 32px;
+  @include onTablet {
     width: 32px;
+    height: 32px;
   }
 
   &--phone {
@@ -19,7 +21,6 @@
   }
 
   &--menu {
-    background-image: url(../images/icons/icon-burger-menu.svg);
     &:hover {
       background-image: url(../images/icons/icon-burger-menu-hover.svg);
     }

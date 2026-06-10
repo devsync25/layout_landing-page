@@ -1,20 +1,20 @@
 .header {
   background-image: url(../images/header-bg.png);
-  background-size: cover;
   background-position: center;
+  background-size: cover;
 
   &__content {
-    height: 100vh;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100vh;
   }
 
   &__title {
-    padding-bottom: 288px;
-    font-weight: 700;
+    margin: 0;
+
     font-size: 40px;
+    font-weight: 700;
     line-height: 100%;
     color: $main-text-color;
     text-align: center;
@@ -23,18 +23,21 @@
     @include onTablet {
       font-size: 64px;
     }
+
     @include onDesktop {
       font-size: 80px;
     }
   }
 
   &__bottom {
-    padding-bottom: 40px;
+    @include contentPaddingInline;
 
-    @include constentPaddingInline;
+    padding-bottom: 288px;
 
-    @include onTablet {
-      padding-bottom: 64px;
-    }
+
+  }
+
+  @include onDesktop {
+    padding-bottom: 482px;
   }
 }

@@ -1,0 +1,75 @@
+.contact-us {
+  @include pageGrid;
+
+  row-gap: 48px;
+
+  @include onTablet {
+    gap: 75px;
+  }
+
+  &__title {
+    grid-column: 1 / -1;
+    margin: 0;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  &__content {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr;
+    row-gap: 48px; 
+
+    @include onTablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 32px;
+    }
+
+    @include onDesktop {
+      display: contents;
+    }
+  }
+
+  &__info {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr;
+    row-gap: 48px; 
+
+    @include onTablet {
+      grid-column: 1 / 2; 
+    }
+
+
+    @include onDesktop {
+      display: contents;
+    }
+  }
+
+  &__branch {
+    @include onDesktop {
+      grid-column: span 3;
+    }
+  }
+
+  &__form {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr;
+    row-gap: 16px; 
+
+      @include onTablet {
+      grid-column: 2 / 3; 
+    }
+
+    @include onDesktop {
+      grid-column: span 6;
+    }
+  }
+
+  &__textarea {
+    resize: vertical;
+    min-height: 150px;
+  }
+}

@@ -1,26 +1,80 @@
 .now-on-view {
+  @include pageGrid;
+
+  padding-block: 40px;
+
   &__header {
-    padding-bottom: 48px;
+    grid-column: 1 / -1;
     text-align: center;
 
     .section-title {
       margin-bottom: 8px;
     }
+
+    @include onTablet {
+      padding-bottom: 48px;
+    }
   }
 
   &__text {
-    width: 325px;
+    grid-column: 1 / -1;
+
     margin: 0 auto;
+
     font-weight: 400;
     line-height: 1.69;
+    text-align: center;
+
+    @include onTablet {
+      max-width: 442px;
+    }
   }
 
   &__wrapper {
     display: grid;
+    grid-column: 1 / -1;
     row-gap: 40px;
 
     @include onTablet {
       row-gap: 48px;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    grid-column: 1 / -1;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  &__button {
+    cursor: pointer;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 280px;
+    padding: 15px 38px 15px 65px;
+    border: none;
+
+    color: #fff;
+    text-transform: uppercase;
+
+    background-color: #d12d35;
+
+    @include hover(background-color, #ae1c23);
+
+    &:hover {
+      color: #f6f5f5;
+    }
+
+    @include onTablet {
+      width: 392px;
+    }
+
+    @include onDesktop {
+      width: 324px;
     }
   }
 }

@@ -4,20 +4,27 @@
   }
 }
 
+@mixin onTabletLayout {
+  @media (min-width: $tablet-layout-width) {
+    @content;
+  }
+}
+
 @mixin onDesktop {
   @media (min-width: $desktop-min-width) {
     @content;
   }
 }
 
-@mixin constentPaddingInline() {
+@mixin contentPaddingInline() {
   padding-inline: 20px;
 
-  @include onTablet() {
+  @include onTablet {
     padding-inline: 72px;
   }
-  @include onDesktop() {
-    max-width: 1020px;
+
+  @include onDesktop {
+    max-width: 1260px;
     margin-inline: auto;
     padding-inline: 120px;
   }
@@ -25,14 +32,17 @@
 
 @mixin pageGrid {
    --columns: 2;
+
   display: grid;
-  column-gap: 20px;
   grid-template-columns: repeat(var(--columns), 1fr);
+  column-gap: 20px;
 
   @include onTablet {
     --columns: 6;
+
     column-gap: 24px;
   }
+
   @include onDesktop {
     --columns: 12;
   }
@@ -40,14 +50,14 @@
 }
 
 .container {
-  @include constentPaddingInline;
+  @include contentPaddingInline;
 }
 
 @mixin hover($property, $toValue) {
-  //$property — это переменная для свойства (например, color, transform или background-color).
+  // $property — это переменная для свойства (например, color, transform или background-color).
   transition: #{$property} $effectDuration ease;
 
   &:hover {
-    #{$property}: $toValue; //$toValue — это конечное значение (например, red, scale(1.2) или blue).
+    #{$property}: $toValue; // $toValue — это конечное значение (например, red, scale(1.2) или blue).
   }
 }

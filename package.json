@@ -5,7 +5,7 @@
   "source": "src/index.html",
   "scripts": {
     "init": "mate-scripts init",
-    "start": "rm -rf .parcel-cache dist && parcel --open",
+    "start": "mate-scripts start -l --open",
     "style-format": "npx stylelint 'src/**/*.scss' --fix --allow-empty-input",
     "format": "prettier --ignore-path .prettierignore --write './src/**/*.{html,css,scss}'",
     "lint": "npm run style-format && npm run format && mate-scripts lint",
