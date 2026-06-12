@@ -12,6 +12,11 @@
     />
     <title>Landing Page</title>
     <link
+      rel="icon"
+      type="image/png"
+      href="./images/favicon.png"
+    />
+    <link
       rel="preconnect"
       href="https://fonts.googleapis.com"
     />
@@ -52,10 +57,37 @@
               />
             </a>
             <div class="top-bar__icons">
-              <a
-                href="#"
-                class="icon icon--phone"
-              ></a>
+              <div class="top-bar__contacts">
+                <div class="top-bar__phones-dropdown">
+                  <div class="top-bar__phone-item">
+                    <span class="top-bar__phone-branch">
+                      The Met Fifth Avenue
+                    </span>
+                    <a
+                      href="tel:+12125357710"
+                      class="top-bar__phone-link"
+                    >
+                      +1 212-535-7710
+                    </a>
+                  </div>
+
+                  <div class="top-bar__phone-item">
+                    <span class="top-bar__phone-branch">The Met Cloisters</span>
+                    <a
+                      href="tel:+12129233700"
+                      class="top-bar__phone-link"
+                    >
+                      +1 212-923-3700
+                    </a>
+                  </div>
+                </div>
+
+                <a
+                  href="#"
+                  class="icon icon--phone"
+                ></a>
+              </div>
+
               <a
                 href="#menu"
                 class="icon icon--menu"
@@ -462,7 +494,14 @@
                   </a>
                   <p class="contacts__label">Address</p>
                   <address class="contacts__address">
-                    1000 Fifth Avenue New York, NY 10028
+                    <a
+                      href="https://maps.google.com/?q=The+Met+Fifth+Avenue+New+York"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="contacts__address-link"
+                    >
+                      1000 Fifth Avenue New York, NY 10028
+                    </a>
                   </address>
                 </div>
 
@@ -477,7 +516,15 @@
                   </a>
                   <p class="contacts__label">Address</p>
                   <address class="contacts__address">
-                    99 Margaret Corbin Drive Fort Tryon Park New York, NY 10040
+                    <a
+                      href="https://maps.google.com/?q=The+Met+Cloisters+New+York"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="contacts__address-link"
+                    >
+                      99 Margaret Corbin Drive Fort Tryon Park New York, NY
+                      10040
+                    </a>
                   </address>
                 </div>
               </div>

@@ -8,11 +8,6 @@
     padding-block: 50px;
   }
 
-  &__icons {
-    display: flex;
-    gap: 24px;
-  }
-
   &__logo-link {
     display: flex;
   }
@@ -25,5 +20,77 @@
     @include onTablet {
       height: 65px;
     }
+  }
+
+  &__icons {
+    display: flex;
+    gap: 55px;
+    align-items: center;
+  }
+
+  &__contacts {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  &__phones-dropdown {
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%) translateX(-10px);
+
+    width: max-content;
+
+    text-align: right;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  &__phone-item {
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__phone-branch {
+    display: block;
+
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+
+  &__phone-link {
+    display: block;
+
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+
+    opacity: 0.8;
+
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__contacts:hover &__phones-dropdown {
+    transform: translateY(-50%);
+    visibility: visible;
+    opacity: 1;
   }
 }

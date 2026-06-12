@@ -40,18 +40,22 @@
 }
 
 .form-input {
-  padding: 16px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 14px 16px;
   border: 1px solid transparent;
 
   font-family: inherit;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 20px;
   color: #161616;
 
   background-color: #f8f8fa;
   outline: none;
 
-  transition: background-color $effectDuration ease, border-color $effectDuration ease;
+  transition:
+    background-color $effectDuration ease,
+    border-color $effectDuration ease;
 
   @include hover(background-color, #f8f8fa);
 
@@ -63,5 +67,26 @@
   &:focus {
     border-color: #161616;
     background-color: #f8f8fa;
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  height: 360px;
+
+  &__input {
+    height: 48px;
+    margin-bottom: 16px;
+  }
+
+  &__textarea {
+    resize: vertical;
+    height: 144px;
+    margin-bottom: 0;
+  }
+
+  &__button {
+    margin-top: auto;
   }
 }

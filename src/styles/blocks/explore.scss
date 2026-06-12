@@ -1,17 +1,14 @@
 .explore-online {
   @include pageGrid;
 
-  
-
   &__title {
-     grid-column: 1 / -1;
+    grid-column: 1 / -1;
 
-     max-width: none;
-     margin: 0;
-     margin-bottom: 40px;
+    max-width: none;
+    margin: 0;
+    margin-bottom: 40px;
 
     text-align: center;
-  
 
     @include onTablet {
       grid-column: 2 / 6;
@@ -21,7 +18,6 @@
       grid-column: 4 / 10;
     }
   }
- 
 
   &__items {
     display: grid;
@@ -30,28 +26,23 @@
     gap: 48px;
 
     @include onTablet {
-     grid-column: 2 / 6;
+      grid-column: 2 / 6;
     }
 
     @include onDesktop {
       display: contents;
-      
     }
-   
   }
 
   &__item {
     grid-column: 1 / -1;
 
-
     @include onTablet {
       grid-column: 1 / 1;
     }
-    
 
     @include onDesktop {
       grid-column: span 4;
-    
     }
   }
 }

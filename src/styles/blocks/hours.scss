@@ -1,9 +1,8 @@
 .hours {
- @include pageGrid;
+  @include pageGrid;
 
   &__header {
     grid-column: 1 / -1;
-
 
     @include onTablet {
       grid-column: 1 / 4;
@@ -12,7 +11,6 @@
     @include onDesktop {
       grid-column: 1 / 6;
     }
-    
   }
 
   &__subtitle {
@@ -39,7 +37,7 @@
     }
 
     @include onDesktop {
-     grid-column: 6 / -1;
+      grid-column: 6 / -1;
     }
   }
 }

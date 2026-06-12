@@ -22,7 +22,7 @@
     }
 
     &:has(.exhibition-card__link--3--square) {
-      @media (max-width: ($tablet-min-width - 1px)) {
+      @media (max-width: ($tablet-layout-width - 1px)) {
         display: flex;
         gap: 8px;
         justify-content: center;
@@ -58,8 +58,9 @@
 
         .exhibition-card__link--3--square {
           grid-column: span 4;
-          width: 324px;
-          height: 320px;
+          aspect-ratio: 1 / 1;
+          width: 100%;
+          height: auto;
 
           &:nth-child(3) {
             display: block;
@@ -146,8 +147,7 @@
 
   &__title {
     margin: 0;
-    color: #D12D35;
-
+    color: #d12d35;
   }
 
   &__date {

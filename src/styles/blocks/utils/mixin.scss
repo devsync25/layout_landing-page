@@ -1,3 +1,4 @@
+/* stylelint-disable scss/at-mixin-pattern */
 @mixin onTablet {
   @media (min-width: $tablet-min-width) {
     @content;
@@ -31,7 +32,7 @@
 }
 
 @mixin pageGrid {
-   --columns: 2;
+  --columns: 2;
 
   display: grid;
   grid-template-columns: repeat(var(--columns), 1fr);
@@ -46,7 +47,6 @@
   @include onDesktop {
     --columns: 12;
   }
-
 }
 
 .container {

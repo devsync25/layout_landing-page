@@ -1,8 +1,6 @@
 .now-on-view {
   @include pageGrid;
 
-  padding-block: 40px;
-
   &__header {
     grid-column: 1 / -1;
     text-align: center;
