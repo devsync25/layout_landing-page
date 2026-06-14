@@ -36,22 +36,28 @@
   }
 
   &__phones-dropdown {
-    position: absolute;
-    top: 50%;
-    right: 40px;
-    transform: translateY(-50%) translateX(-10px);
+    display: none;
 
-    width: max-content;
+    @include onTablet {
+      position: absolute;
+      top: 50%;
+      right: 40px;
+      transform: translateY(-50%) translateX(-10px);
 
-    text-align: right;
+      display: block;
 
-    visibility: hidden;
-    opacity: 0;
+      width: max-content;
 
-    transition:
-      opacity 0.3s ease,
-      visibility 0.3s ease,
-      transform 0.3s ease;
+      text-align: right;
+
+      visibility: hidden;
+      opacity: 0;
+
+      transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease,
+        transform 0.3s ease;
+    }
   }
 
   &__phone-item {
@@ -88,9 +94,11 @@
     }
   }
 
-  &__contacts:hover &__phones-dropdown {
-    transform: translateY(-50%);
-    visibility: visible;
-    opacity: 1;
+  @include onTablet {
+    &__contacts:hover &__phones-dropdown {
+      transform: translateY(-50%);
+      visibility: visible;
+      opacity: 1;
+    }
   }
 }

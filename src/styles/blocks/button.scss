@@ -68,6 +68,22 @@
     border-color: #161616;
     background-color: #f8f8fa;
   }
+
+  &:autofill,
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #f8f8fa inset !important; // Твой цвет фона
+    box-shadow: 0 0 0 1000px #f8f8fa inset !important;
+
+    -webkit-text-fill-color: #161616 !important; // Твой цвет текста
+  }
+
+  &:autofill:hover,
+  &:autofill:focus,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 1000px #f8f8fa inset !important;
+    box-shadow: 0 0 0 1000px #f8f8fa inset !important;
+  }
 }
 
 .contact-form {

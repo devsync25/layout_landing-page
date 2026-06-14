@@ -7,6 +7,10 @@
   line-height: 27px;
   color: #161616;
 
+  .page:has(.page__menu:target) {
+    overflow: hidden;
+  }
+
   &__body {
     min-width: 320px;
     margin: 0;
