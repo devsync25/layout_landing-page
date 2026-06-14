@@ -39,6 +39,8 @@
     display: none;
 
     @include onTablet {
+      will-change: transform, opacity;
+
       position: absolute;
       top: 50%;
       right: 40px;
@@ -87,7 +89,7 @@
 
     opacity: 0.8;
 
-    transition: opacity 0.2s;
+    transition: opacity 0.2s ease;
 
     &:hover {
       opacity: 1;

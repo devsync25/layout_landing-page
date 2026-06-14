@@ -6,7 +6,6 @@
   &__title {
     grid-column: 1 / -1;
     margin: 0;
-    margin-bottom: 0;
     text-align: center;
   }
 
@@ -17,7 +16,6 @@
     row-gap: 48px;
 
     @include onTablet {
-      display: grid;
       grid-template-columns: repeat(2, 1fr);
       column-gap: 75px;
     }
@@ -61,10 +59,5 @@
       grid-column: 8 / -1;
       align-self: start;
     }
-  }
-
-  &__textarea {
-    resize: vertical;
-    min-height: 150px;
   }
 }

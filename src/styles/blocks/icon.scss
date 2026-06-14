@@ -4,7 +4,6 @@
   width: 24px;
   height: 24px;
 
-  background-image: url(../images/icons/icon-burger-menu.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -21,9 +20,12 @@
   }
 
   &--menu {
-    &:hover {
-      background-image: url(../images/icons/icon-burger-menu-hover.svg);
-    }
+    background-image: url(../images/icons/icon-burger-menu.svg);
+
+    @include hover(
+      background-image,
+      url(../images/icons/icon-burger-menu-hover.svg)
+    );
   }
 
   &--close {

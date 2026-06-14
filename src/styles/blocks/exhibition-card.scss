@@ -13,8 +13,6 @@
 
         .exhibition-card__link--wide,
         .exhibition-card__link--square {
-          flex: 0 0 130px;
-          aspect-ratio: 1 / 1;
           width: 130px;
           height: 130px;
         }
@@ -29,7 +27,6 @@
 
         .exhibition-card__link--3--square {
           grid-column: auto;
-          flex: 0 0 87px;
           width: 87px;
           height: 87px;
         }

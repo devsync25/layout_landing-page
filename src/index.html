@@ -10,7 +10,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Landing Page</title>
+    <title>The Metropolitan Museum of Art</title>
     <link
       rel="icon"
       type="image/png"
@@ -83,7 +83,7 @@
                 </div>
 
                 <a
-                  href="#"
+                  href="tel:+12125357710"
                   class="icon icon--phone"
                 ></a>
               </div>
@@ -355,7 +355,7 @@
                     class="exhibition-card__link exhibition-card__link--square exhibition-card__link--3--square"
                   >
                     <img
-                      src="/src/images/now-on-view/now-on-view-5@1.5x.png"
+                      src="./images/now-on-view/now-on-view-5@1.5x.png"
                       alt="Detailed Buddhist painting of a wrathful deity and spiritual figures"
                       class="exhibition-card__image exhibition-card__image--3"
                       loading="lazy"
@@ -430,12 +430,17 @@
             </h2>
             <div class="explore-online__items">
               <article class="explore-item explore-online__item">
-                <img
-                  src="./images/explore-online/collection-areas.png"
-                  alt="Collection Areas"
-                  class="explore-item__image"
-                  loading="lazy"
-                />
+                <a
+                  href="#"
+                  class="explore-item__image-link"
+                >
+                  <img
+                    src="./images/explore-online/collection-areas.png"
+                    alt="Collection Areas"
+                    class="explore-item__image"
+                    loading="lazy"
+                  />
+                </a>
                 <h3 class="explore-item__title">Collection Areas</h3>
                 <p class="explore-item__text">
                   These collection areas study, exhibit, and care for the
@@ -444,12 +449,17 @@
               </article>
 
               <article class="explore-item explore-online__item">
-                <img
-                  src="./images/explore-online/travel.png"
-                  alt="Travel"
-                  class="explore-item__image"
-                  loading="lazy"
-                />
+                <a
+                  href="#"
+                  class="explore-item__image-link"
+                >
+                  <img
+                    src="./images/explore-online/travel.png"
+                    alt="Travel"
+                    class="explore-item__image"
+                    loading="lazy"
+                  />
+                </a>
                 <h3 class="explore-item__title">Travel</h3>
                 <p class="explore-item__text">
                   Travel with The Met connects the Museum's wide and diverse
@@ -458,11 +468,16 @@
               </article>
 
               <article class="explore-item explore-online__item">
-                <img
-                  src="./images/explore-online/virtual-group-tours.png"
-                  alt="Virtual Group Tours"
-                  class="explore-item__image"
-                />
+                <a
+                  href="#"
+                  class="explore-item__image-link"
+                >
+                  <img
+                    src="./images/explore-online/virtual-group-tours.png"
+                    alt="Virtual Group Tours"
+                    class="explore-item__image"
+                  />
+                </a>
                 <h3 class="explore-item__title">Virtual Group Tours</h3>
                 <p class="explore-item__text">
                   Request a guided tour, reserve admission and lead your own
@@ -529,7 +544,13 @@
                 </div>
               </div>
 
-              <form class="contact-us__form contact-form">
+              <form
+                class="contact-us__form contact-form"
+                onsubmit="
+                  this.reset();
+                  return false;
+                "
+              >
                 <input
                   type="text"
                   class="contact-form__input form-input"
