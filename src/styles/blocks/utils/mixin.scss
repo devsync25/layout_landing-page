@@ -54,10 +54,9 @@
 }
 
 @mixin hover($property, $toValue) {
-  // $property — это переменная для свойства (например, color, transform или background-color).
   transition: #{$property} $effectDuration ease;
 
   &:hover {
-    #{$property}: $toValue; // $toValue — это конечное значение (например, red, scale(1.2) или blue).
+    #{$property}: $toValue;
   }
 }

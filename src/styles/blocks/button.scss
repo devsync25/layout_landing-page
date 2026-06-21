@@ -70,10 +70,10 @@
 
   &:autofill,
   &:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 1000px #f8f8fa inset !important; // Твой цвет фона
+    -webkit-box-shadow: 0 0 0 1000px #f8f8fa inset !important;
     box-shadow: 0 0 0 1000px #f8f8fa inset !important;
 
-    -webkit-text-fill-color: #161616 !important; // Твой цвет текста
+    -webkit-text-fill-color: #161616 !important;
   }
 
   &:autofill:hover,
